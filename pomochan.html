@@ -1,0 +1,59 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" href="pomochan.css">
+  </head> 
+  <body>
+    
+    <!-- <h1>Pomochan! </h1> -->
+
+   <!-- frame: Board -->
+<div class="frame board">
+    <!-- rect: chalkboard -->
+   
+    <div class="shape rect chalkboard">
+        <div class="chat-container">
+            <div id="chat-log" class="chat-log">
+              <!-- AI and user messages will appear here -->
+            </div>
+            <form id="chat-form">
+              <input type="text" id="chat-input" placeholder="Ask Pomochan..." />
+              <button type="submit">Send</button>
+            </form>
+          </div>
+          
+    </div>
+    <!-- rect: pomochantitle -->
+    <div class="shape rect pomochantitle">
+    </div>
+    <!-- rect: pomochanhiragana -->
+    <div class="shape rect pomochanhiragana">
+    </div>
+    <!-- rect: pcheadernobg -->
+    <div class="shape rect pcheadernobg">
+    </div>
+  
+    <!-- rect: pcqm -->
+    <div class="shape rect pcqm" id="help-button">
+    </div>
+  </div>
+  
+  <div id="help-overlay" class="help-overlay" style="display: none;">
+    <!-- frame: Board -->
+    <div class="frame board-4580f3bacc8b">
+      <!-- Help text -->
+      <div class="shape text try-asking-457e20ad74a6">
+        Try asking Pomochan for study tips or to start a Pomodoro timer!
+      </div>
+  
+      <!-- Close (X) -->
+      <div class="shape text x-4581cbd636cc" id="close-help">
+        X
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="popup.js"></script>
+  </body>
+</html>

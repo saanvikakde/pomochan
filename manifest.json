@@ -5,7 +5,7 @@
     "manifest_version": 3,
     "action": {
       "default_popup": "pomochan.html",
-      "default_icon": "assets/neko.png"
+      "default_icon": "assets/pomochanpic.png"
     },
     "host_permissions": [
   "http://127.0.0.1:5000/"

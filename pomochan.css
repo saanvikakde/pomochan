@@ -1,26 +1,153 @@
-.help-overlay {
-    position: absolute;
-    top: 80px;
-    left: 120px;
-    width: 50%;
-    height: 25%;
-    background: rgba(255, 248, 223); 
-    color: rgb(62, 46, 40);
-    font-family: 'Gloria Hallelujah';
-    padding: 20px;
-    z-index: 1000;
-    border-radius: 8px;
 
+button, 
+  button:hover, 
+  #chat-button, 
+  #help-button, 
+  #start-timer, 
+  #reset-timer, 
+  #pause-timer,
+  #timer-button {
+    cursor:pointer; 
+  }
+
+  
+  #chat-button:active,
+  #help-button:active,
+  #start-timer:active, 
+  #reset-timer:active, 
+  #pause-timer:active, 
+  #timer-button:active {
+  transform: scale(0.95); /* subtle press effect */
+}
+
+
+.chalk-overlay {
+    position: absolute;
+    left: 18px;
+    top: 79px;
+    width: 314px;
+    height: 434px;
+    border-radius: 0px 0px 0px 0px;
+    background: url("assets/chalkboard.png") no-repeat center center;
+    background-size: contain;
+    transition: opacity 0.4s ease;
+    
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    width: 80%;
   }
   
-  #close-help {
+  .pomodoro-timer {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    cursor: pointer;
-    font-size: 24px;
-  }  
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    display: none;
+  }
 
+  /* pomochanpic */
+  .pomochanpic{
+    position: absolute;
+    left: 99px;
+    top: 45px;
+    width: 122px;
+    height: 183px;
+    background: url("assets/pomochanpic.png") no-repeat center center;
+    background-size: contain;
+    border-radius: 0px 0px 0px 0px;
+  }
+ 
+  .timer-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    margin-top: 100px;
+  }
+  
+  #timer-display {
+    font-size: 60px;
+    color: rgba(218, 218, 218, 0.909);
+    text-align: center;
+    min-width: 100px;
+    margin-left: 29px;
+    margin-top: 95px;
+  }
+
+    #increase-time,
+    #decrease-time {
+    font-family: 'Gloria Hallelujah';
+    font-size: 32px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.798);
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    margin-left: 25px;
+    margin-right: 0px;
+    margin-top: 95px;
+
+  }
+
+    #increase-time:active,
+    #decrease-time:active {
+    transform: scale(0.9);
+  }
+
+  #start-timer {
+    position: absolute;
+    left: 200px;
+    top: 292px;
+    width: 73px;
+    height: 84px;
+    border-radius: 0px 0px 0px 0px;
+    background: url("assets/pcplay.png") no-repeat center center;
+    background-size: contain;
+  }
+
+  #pause-timer {
+    position: absolute;
+    left: 128px;
+    top: 293px;
+    width: 75px;
+    height: 84px;
+    border-radius: 0px 0px 0px 0px;
+    background: url("assets/pcpause.png") no-repeat center center;
+    background-size: contain;
+  }
+  #reset-timer {
+    position: absolute;
+    left: 38px;
+    top: 293px;
+    width: 85px;
+    height: 83px;
+    border-radius: 0px 0px 0px 0px;
+    background: url("assets/pcrestart.png") no-repeat center center;
+    background-size: contain;
+  }
+  
+  #time-input {
+    width: 50px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-top: 100px;
+    margin-left: 120px;
+    color: white;
+    background-color: rgb(218, 218, 218, 0);
+  }
+  
 /*Chat box features*/
 .chat-container {
     display: flex;
@@ -147,6 +274,43 @@
     border-radius: 0px 0px 0px 0px;
     background: url("assets/pcqm.png") no-repeat center center; 
     background-size: contain;
+    z-index: 1;
+  }
+
+  .underlay {
+    position: absolute;
+    left: 285px;
+    z-index: -1;
+    top: 46px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(231, 45, 45, 0.4); /* semi-transparent red */
+    border-radius: 50%;
+    box-shadow: 0 0 15px 8px rgba(231, 45, 45, 0.6);
+  }
+
+  .pccb {
+    position: absolute;
+    left: 283px;
+    top: 103px;
+    width: 68px;
+    height: 68px;
+    background: url("assets/pccb.png") no-repeat center center; 
+    border-radius: 0px 0px 0px 0px;
+    background-size: contain;
+
+  }
+
+  .pchg {
+    position: absolute;
+    left: 283px;
+    top: 163px;
+    width: 68px;
+    height: 68px;
+    background: url("assets/pchg.png") no-repeat center center; 
+    border-radius: 0px 0px 0px 0px;
+    background-size: contain;
+
   }
   
   /* pcheadernobg */
@@ -194,7 +358,9 @@
     width: 314px;
     height: 434px;
     border-radius: 0px 0px 0px 0px;
-    box-shadow: 4px 4px 4px 0px #00000033;
+    box-shadow: 4px 4px 4px 0px #00000038;
     background: url("assets/chalkboard.png") no-repeat center center;
     background-size: contain;
   }
+
+  

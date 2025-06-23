@@ -65,9 +65,6 @@ async function getPomochanReply(prompt) {
   return data.reply || "Hmm... I'm having trouble thinking right now!";
 }
 
-// -------------------------------------
-// 🕒 Pomodoro Timer with Persistence
-// -------------------------------------
 
 let minutes = 25;
 let totalSeconds = minutes * 60;
